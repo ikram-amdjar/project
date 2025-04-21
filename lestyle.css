@@ -1,0 +1,180 @@
+body {  
+
+}
+
+#image3 {
+
+   
+    background-image: url("pattern.svg");
+    background-size: contain; /* Redimensionner l'image pour qu'elle soit entièrement visible */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+
+
+#rcorners2  {
+    border-radius: 15px;
+    background: #eeeee4;
+    padding: 20px; 
+    width: 240px;
+    height: 10px;  
+    position: absolute;
+    top: 405px;
+    left: 610px;
+    z-index: 1; /* couche au-dessus */
+    
+  }
+
+
+
+
+#rcorners  {
+    border-radius: 15px;
+    background: white;
+    padding: 20px; 
+    width: 300px;
+    height: 500px;  
+    position: absolute;
+    top: 60px;
+    left: 580px;
+    z-index: 0; /* couche du fond */
+  
+  
+    
+  }
+
+/* z-index permet de gérer la superposition des éléments en position absolute, relative ou fixed.
+
+Plus le z-index est grand, plus l’élément est "au-dessus".
+
+Sans z-index, l’ordre dépend du HTML, donc #rcorners cache #rcorners2.   */
+
+  
+
+
+  #image2 {
+   
+   
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    overflow: hidden;  /*  Ton image est un fichier SVG. Certains SVGs ont un fond blanc intégré qui cache les bords arrondis  */
+    display: block;
+    object-fit: cover;
+    position :absolute ;
+    width: 340px;  
+    height: 200px; 
+    top: 68px;     
+    left: 588px;   
+    
+}
+
+#image1 {
+    position :absolute ;
+    top: 423px;     
+    left: 610px;
+    width: 70px;  /* ajuster la taille de l'image */
+    height: 30px;
+    object-fit: contain;
+    z-index: 2; /*  sans couper l'image :  */
+}
+
+
+
+.order {
+    font-size: 22px;
+    font-weight: bold;
+    color:#000000;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 295px;
+    left : 670px;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    position: absolute;
+    top: 330px;
+    left : 630px;
+}
+
+
+
+
+.plan-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 420px;
+    left : 680px;
+    z-index: 2;
+}
+
+
+
+
+.plan-price {
+    font-size: 14px;
+    color: #555555;
+    position: absolute;
+    top: 440px;
+    left : 680px;
+    z-index: 2;
+}
+
+.change-link {
+    font-size: 16px;
+    color: #6004dc;
+    text-decoration: underline;
+    position: absolute;
+    top: 425px;
+    left : 840px;
+    z-index: 2;
+
+}
+
+.payment-button {
+    background-color: #6004dc;
+    color: white;
+    border: none; /* Cette propriété permet de définir les bordures autour d'un élément. */
+    padding: 15px;
+    width: 280px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 480px;
+    left : 620px;
+
+}
+
+.cancel-link {
+    font-size: 14px;
+    color: #001;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 550px;
+    left : 720px;
+
+}
+
+/* ✅ .payment = classe (tu peux l’utiliser sur plusieurs éléments)
+
+✅ #payment = identifiant unique (tu l’utilises une seule fois par page)  */
